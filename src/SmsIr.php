@@ -1,20 +1,20 @@
 <?php
 
-namespace MyVendor\SmsPackage;
+namespace Ipe\Sdk;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\RequestException;
 use Log;
-use MyVendor\SmsPackage\Exceptions\SmsException;
+use Ipe\Sdk\Exceptions\SmsException;
 
-class SmsService
+class SmsIr
 {
     protected $client;
 
     public function __construct($apiKey, $baseUri)
     {
         $this->client = new Client([
-            'base_uri' => rtrim($baseUri, '/') . '/', // Ensure trailing slash
+            'base_uri' => rtrim($baseUri, '/') . '/',
             'headers' => [
                 'X-API-KEY' => $apiKey,
                 'Accept' => 'application/json',
@@ -54,11 +54,11 @@ class SmsService
     {
         $response = $e->getResponse();
         $message = $e->getMessage();
-        $statusCode = $response ? $response->getStatusCode() : 500; // Default to 500 if no response
+        $statusCode = $response ? $response->getStatusCode() : 500; 
 
         if ($response) {
             $errorBody = json_decode($response->getBody(), true);
-            $message = $errorBody['message'] ?? $message; // Use error message if available
+            $message = $errorBody['message'] ?? $message;
         }
 
         if ($statusCode === 400) {
