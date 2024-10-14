@@ -14,10 +14,10 @@
   "extra": {
     "laravel": {
       "providers": [
-        "Ipe\\Sdk\\SmsIrProvider"
+        "Ipe\\Sdk\\SmsIrServiceProvider"
       ],
       "aliases": {
-        "Sms": "Ipe\\Sdk\\Facades\\Sms"
+        "SmsIr": "Ipe\\Sdk\\Facades\\SmsIr"
       }
     }
   },

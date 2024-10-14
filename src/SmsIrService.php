@@ -7,7 +7,7 @@ use GuzzleHttp\Exception\RequestException;
 use Log;
 use Ipe\Sdk\Exceptions\SmsException;
 
-class SmsIr
+class SmsIrService
 {
     protected $client;
 
