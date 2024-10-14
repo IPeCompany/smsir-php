@@ -5,10 +5,10 @@ namespace Ipe\Sdk\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
-class Sms extends Facade
+class SmsIr extends Facade
 {
     protected static function getFacadeAccessor()
     {
-        return 'Ipe\Sdk\SmsIr';
+        return 'Ipe\Sdk\SmsIrService';
     }
 }

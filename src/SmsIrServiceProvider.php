@@ -4,12 +4,12 @@ namespace Ipe\Sdk;
 
 use Illuminate\Support\ServiceProvider;
 
-class SmsIrProvider extends ServiceProvider
+class SmsIrServiceProvider extends ServiceProvider
 {
     public function register()
     {
-        $this->app->singleton(SmsIr::class, function ($app) {
-            return new SmsIr(
+        $this->app->singleton(SmsIrService::class, function ($app) {
+            return new SmsIrService(
                 env('SMSIR_API_KEY'),  
                 'https://api.sms.ir/v1/'  
             );
