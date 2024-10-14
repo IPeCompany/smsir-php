@@ -1,27 +1,27 @@
 {
-    "name": "ipe/smsir-php",
-    "description": "A package for sending SMS.",
-    "type": "library",
-    "require": {
-        "php": "^7.3|^8.0",
-        "guzzlehttp/guzzle": "^7.0"
-    },
-    "autoload": {
-        "psr-4": {
-            "MyVendor\\SmsPackage\\": "src/"
-        }
-    },
-    "extra": {
-        "laravel": {
-            "providers": [
-                "MyVendor\\SmsPackage\\SmsServiceProvider"
-            ],
-            "aliases": {
-                "Sms": "MyVendor\\SmsPackage\\Facades\\Sms"
-            }
-        }
-    },
-    "license": "MIT",
-    "minimum-stability": "stable",
-    "prefer-stable": true
+  "name": "ipe/smsir-php",
+  "description": "A package for sending SMS.",
+  "type": "library",
+  "require": {
+    "php": "^7.3|^8.0",
+    "guzzlehttp/guzzle": "^7.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Ipe\\Sdk\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Ipe\\Sdk\\SmsIrProvider"
+      ],
+      "aliases": {
+        "Sms": "Ipe\\Sdk\\Facades\\Sms"
+      }
+    }
+  },
+  "license": "MIT",
+  "minimum-stability": "stable",
+  "prefer-stable": true
 }
