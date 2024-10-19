@@ -21,7 +21,7 @@
 </div>
 
 ```bash
-composer require ipe/sms.ir
+composer require ipe/smsir-php
 ```
 
 <div dir="rtl">
